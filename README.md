@@ -51,12 +51,6 @@ photoacoustic-imaging-plugin-1.0.0-SNAPSHOT-xpl.jar
 6. Go to `Administer > Data Types`.
 7. Use `Set up additional data type` to enable the new data type if XNAT requires it.
 
-Example on a Linux server:
-
-```bash
-sudo service tomcat9 stop
-sudo cp build/libs/*-xpl.jar /data/xnat/home/plugins/
-sudo service tomcat9 start
 ```
 
 ## DICOM Behavior
