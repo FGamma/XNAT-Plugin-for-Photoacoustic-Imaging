@@ -51,8 +51,6 @@ photoacoustic-imaging-plugin-1.0.0-SNAPSHOT-xpl.jar
 6. Go to `Administer > Data Types`.
 7. Use `Set up additional data type` to enable the new data type if XNAT requires it.
 
-```
-
 ## DICOM Behavior
 
 The `XnatPhotoacousticimagingsessiondataBeanFactory` and `XnatPhotoacousticimagingscandataBeanFactory` classes read the DICOM `Modality` tag.
@@ -85,19 +83,6 @@ It defines:
 - `xnat:photoacousticimagingScanData`, extending `xnat:imageScanData`
 
 ## Troubleshooting
-
-### The plugin does not load
-
-- Make sure the jar copied into `${xnat.home}/plugins` ends with `-xpl.jar`.
-- Check the Tomcat/XNAT startup logs.
-- Confirm that the target XNAT version is compatible with the versions configured in `build.gradle`.
-
-### The data type does not appear in XNAT
-
-- Make sure `xnatDataBuilder` ran before creating the plugin jar.
-- Confirm that `photoacousticimaging.xsd` is included in the jar.
-- After restarting XNAT, log in as an administrator and check `Administer > Data Types`.
-
 ### DICOM files are not classified as Photoacoustic Imaging
 
 - Make sure the DICOM `Modality` tag is set to `PAI`.
